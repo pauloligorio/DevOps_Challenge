@@ -3,14 +3,14 @@ name: .NET Core
 on:
   push:
     branches: [ main ]
+    paths: 
+     - './formando-devs-api/formando-devs-api.csproj'
   pull_request:
     branches: [ main ]
+  
 
 jobs:
   build:
-    env:
-      CAMINHO_PROJETO: ./formando-devs-api/formando-devs-api.csproj
-
     runs-on: ubuntu-latest
 
     steps:
