@@ -22,4 +22,4 @@ jobs:
     - name: Build
       run: dotnet build formando-devs-api --configuration Release --no-restore
     - name: Test
-      run: dotnet test formando-devs-test --no-restore --verbosity normal
+      run: dotnet test formando-devs-test --no-restore
