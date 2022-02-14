@@ -16,8 +16,8 @@ jobs:
         dotnet-version: '3.1.x' # Definindo versao
     
     - name: Install dependencies
-      run: dotnet restore formando-devs-api # instalando dependencias definindo o projeto
+      run: dotnet restore formando-devs-api # instalando dependencias / definindo o projeto
     - name: Build
-      run: dotnet build formando-devs-api --configuration Release --no-restore # construindo a aplicacaoo
+      run: dotnet build formando-devs-api --configuration Release --no-restore # construindo a aplicacao/Define a configuração da compilação como Release / Não executa uma restauração implícita durante o build
     - name: Test
-      run: dotnet test formando-devs-test --no-restore --verbosity detailed # testando a aplicacao
+      run: dotnet test formando-devs-test --no-restore --verbosity detailed # testando a aplicacao /Não executa uma restauração implícita durante o teste / descreve cada comando detalhadamente
