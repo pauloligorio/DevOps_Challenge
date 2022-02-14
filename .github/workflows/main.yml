@@ -13,13 +13,11 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1.x'
+        dotnet-version: '3.1.x' # Definindo versao
     
-    - name: listen archives
-      run : ls -la
     - name: Install dependencies
-      run: dotnet restore formando-devs-api
+      run: dotnet restore formando-devs-api # instalando dependencias definindo o projeto
     - name: Build
-      run: dotnet build formando-devs-api --configuration Release --no-restore
+      run: dotnet build formando-devs-api --configuration Release --no-restore # construindo a aplicacaoo
     - name: Test
-      run: dotnet test formando-devs-test --no-restore --verbosity detailed
+      run: dotnet test formando-devs-test --no-restore --verbosity detailed # testando a aplicacao
