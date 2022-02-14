@@ -17,10 +17,16 @@ namespace formando_devs_api
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
+
             Host.CreateDefaultBuilder(args)
+
                 .ConfigureWebHostDefaults(webBuilder =>
+
                 {
-                    webBuilder.UseStartup<Startup>();
+                    var HostURL= Environment.GetEnvironmentVariable("HostURL");
+                    webBuilder.UseUrls(String.IsNullOrWhiteSpace(HostURL)?"http://0.0.0.0:8080":HostURL).UseStartup<Startup>(); // definindo variavel de ambiente para que seja repassado dentro do docker a porta de preferência para subir a aplicação
+
                 });
+
     }
 }
