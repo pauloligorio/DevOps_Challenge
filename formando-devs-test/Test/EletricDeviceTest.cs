@@ -15,7 +15,7 @@ namespace EmployeeService.Test
             return Power;
         }
 
-        [TestCase(20, 220, ExpectedResult = 15) // era 11
+        [TestCase(20, 220, ExpectedResult = 11)] // era 11
         [TestCase(20, 110, ExpectedResult = 5.5)]
         public double When_VoltageAndCurrentExpectsResistenceResult(double Current, double Voltage)
         {
